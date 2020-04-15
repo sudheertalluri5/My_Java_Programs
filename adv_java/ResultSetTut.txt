@@ -1,0 +1,22 @@
+ResultSet Interface acts as cursor pointing to a row of a table or we can call it as a pointer to row of a table.
+ResultSet cursor by default is forward cursor but we can move it backward also by using a special createStatement(int,int) method.
+Some constants are in ResultSet that helps us in making ResultSet object as scroll sensitive
+1)ResultSet.TYPE_SCROLL_SENSITIVE- to make ResultSet object that is returned from Statement object as scroll sensitive i.e. pointing to any row based on index of row
+2)ResultSet.TYPE_SCROLL_INSENSITIVE- to make ResultSet object that is returned from Statement object as not scroll sensitive 
+It is same as defualt createStatement() method
+3)ResultSet.CONCUR_UPDATABLE to make ResultSet object as updatable
+Here 1) and 3) if used as first and second arguments of createStament(int,int) method respectively then ResultSet object can be used as scroll sensitive and updatable.
+Example of this is present in ResultSetEx.java program. 
+
+methods:
+
+1)public boolean next() is used to check whether any more rows are left or not
+2)public boolean previous() is used to move the cursor to previous row from the current position
+3)public boolean first() is used to move the cursor to first row of the ResultSet Object
+4)public boolean last() is used to move the cursor to first row of the ResultSet Object
+5)get Methods-getInt(int ColumnIndex) getInt(String columnName) getString(int columnIndex) getString(String ColumName).....
+6)public boolean absolute(int row) it is used to move the cursor to the specified row number in the ResultSet Object
+7)public boolean relative(int row) it is used to move the cursor to the relative row number in ResultSet object it may be positive or negative, it in the sense the argument that we pass
+-> In absolute method if we pass the index of the row i.e. is not present it returns false and points to previous row itself, but in relative method if we move to unaccesible row then we have to come back to accesible rows and then perform other operations.
+-> absolute and relative methods are only used for scroll sensitive ResultSet Object only i.e. those can move acc to index of row.
+ 

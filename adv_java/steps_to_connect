@@ -1,0 +1,19 @@
+5 steps:
+*Registering Driver class: using forName method present in Class class which dynamically loads the drivers(public static void forName(String className) throws ClassNotFoundException)
+EX: Class.forName("oracle.jdbc.driver.OracleDriver");
+*Creating the connection using getConnection method of DriverManager class
+public static Connection getConnection(String url)throws SQLException
+public static Connection getConnection(String url,String name,String password)throws SQLException
+Ex:Connection con=DriverManager.getConnection("jdbc:oracle:thin:@localhost:1521:xe",system,....);
+*Create Statement using createStatement method of Connection Interface
+public Statement createStatement() throws SQLException
+Statement st=con.createStatement();
+*Executing the SQL commands
+public int executeUpdate() method for all SQL operations Except Select and it returns an integer that returns no of rows updated.
+public ResultSet executeQuery() method for select operation of SQL and it returns ResultSet object.
+ResultSet object contains 
+next() method which returns a boolean that says whether next element is present or not
+There are also get methods to retreive information from ResultSet object.
+*Closing the connection object
+conobj.close();
+If we want to close the connection automatically use try with resources block( which is present only for 1.7 version+).

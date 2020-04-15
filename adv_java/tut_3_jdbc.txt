@@ -1,0 +1,8 @@
+Some important points
+1) Connection Interface: used as a factory for Statement,PreparedStatement, DatabaseMetaData
+		By default Connection Interface auto commits the queries
+		We can change it by the use of method "public void setAutoCommit(boolean status)" -by default status is true
+		Connection class also contains commit() and rollback() methods for transaction management.
+2) Statement class:
+		Other than executeQuery and executeUpdate it also contains execute(string sql) and int[] executeBatch() methods.
+		we need to use stmtobj.addBatch("query"); for all the queries we have and then at the end write stmtobj.executeBatch(); then we can do batch queries.

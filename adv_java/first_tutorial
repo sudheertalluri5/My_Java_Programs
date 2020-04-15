@@ -1,0 +1,21 @@
+JDBC stands for Java DataBase Connectivity
+It is an API in java that is used to connect to DataBases
+Before this there is ODBC-open database connectivity by Microsoft which is written in C language which makes it platform dependent and unsecured so java application developers came up with JDBC
+
+			JDBC API
+			   |
+		     Java Application
+			   |
+			JDBC Driver
+			   |
+			Database
+
+current JDBC version is 4.3(Date:18/12/2018)
+All the classes and interfaces related to JDBC are present in java.sql package.
+
+We can use JBDC API to handle database using Java program and can perform the following activites:
+1) Connect to the database
+2) Execute queries and update statements to the database
+3) Getting result received from the database table.
+
+In the next tutorial we go for JDBC Driver.

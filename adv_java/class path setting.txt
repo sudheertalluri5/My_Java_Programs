@@ -1,0 +1,2 @@
+In environment variables in system variable Path append C:\oraclexe\app\oracle\product\11.2.0\server\jdbc\lib\ojdbc8.jar;.;
+If ojdbc8.jar is not present there then download it and paste it in that location and then set environment variable.

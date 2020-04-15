@@ -1,0 +1,14 @@
+JDBC driver is a component of software that helps java appllication to interact with database
+4 JDBC Drivers are there,
+1)JDBC-ODBC bridge driver
+2)Native-API driver
+3)Network Protocol driver
+4)Thin Driver
+
+1) JDBC-ODBC driver contains a JDBC-ODBC bridge driver at client side which acts a bridge between Database and Java Application
+But the thing is that it requires JDBC-ODBC bridge driver installation in every client.
+2) Native-API driver is a driver that is written partially in java and it contains Native API driver that connects Database and Java
+Here Native API driver contains native libraries which is obviously not in java
+3) Network Protocol Driver uses a middleware that converts JDBC calls directly or indirectlly into the vendor-specific database protocol and previous two requires Vendor Database library to do it. But this requires Network support and middle ware used requires database specific coding.This Network protocol driver increases cost also.
+4)Thin Driver converts JDBC calls directly to vendor specipific datbase protcol and it is fully written in java.
+But the thing is these drivers depend on the Database.
